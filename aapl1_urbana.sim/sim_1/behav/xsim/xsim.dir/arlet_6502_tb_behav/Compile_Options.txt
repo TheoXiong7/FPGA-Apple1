@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "arlet_6502_tb_behav" "xil_defaultlib.arlet_6502_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

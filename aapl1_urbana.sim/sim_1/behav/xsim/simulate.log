@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Time: 0 | dbi: 0xxx
+Time: 60000 | dbi: 0x00
+$stop called at time : 8200 ns : File "C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new/apple1_urbana_tb.sv" Line 86

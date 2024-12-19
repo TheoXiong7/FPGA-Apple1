@@ -1,0 +1,328 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Dec 14 10:58:50 2024
+# Process ID: 25004
+# Current directory: C:/Users/theox/Desktop/aapl1_urbana
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25116 C:\Users\theox\Desktop\aapl1_urbana\aapl1_urbana.xpr
+# Log file: C:/Users/theox/Desktop/aapl1_urbana/vivado.log
+# Journal file: C:/Users/theox/Desktop/aapl1_urbana\vivado.jou
+# Running On: beeeebopppp, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 10, Host memory: 17011 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {20} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {40} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.PRIMITIVE {PLL} \
+] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 16
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files -ipstatic_source_dir C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/modelsim} {questa=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/questa} {riviera=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/riviera} {activehdl=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+set_property file_type {Memory Initialization Files} [get_files  C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/roms/vga_font.hex]
+set_property file_type {Memory Initialization Files} [get_files  {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/roms/basic.hex C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/roms/ram.hex C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/roms/vga_font.bin C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/roms/vga_font_bitreversed.hex C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/roms/vga_vram.bin C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/roms/wozmon.hex}]
+export_ip_user_files -of_objects  [get_files C:/Users/theox/Desktop/aapl1_urbana/archive_project_summary.txt] -no_script -reset -force -quiet
+remove_files  C:/Users/theox/Desktop/aapl1_urbana/archive_project_summary.txt
+export_ip_user_files -of_objects  [get_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/aapl1_urbana/archive_project_summary.txt] -no_script -reset -force -quiet
+remove_files  C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/aapl1_urbana/archive_project_summary.txt
+file delete -force C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/imports/aapl1_urbana/archive_project_summary.txt
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+close_hw_manager
+close [ open C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/new/hex_driver.sv w ]
+add_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/new/hex_driver.sv
+update_compile_order -fileset sources_1
+set_property -dict [list \
+  CONFIG.C_BLUE_WIDTH {8} \
+  CONFIG.C_GREEN_WIDTH {8} \
+  CONFIG.C_RED_WIDTH {8} \
+] [get_ips hdmi_tx_0]
+generate_target all [get_files  C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci]
+catch { config_ip_cache -export [get_ips -all hdmi_tx_0] }
+export_ip_user_files -of_objects [get_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -no_script -sync -force -quiet
+reset_run hdmi_tx_0_synth_1
+launch_runs hdmi_tx_0_synth_1 -jobs 16
+wait_on_run hdmi_tx_0_synth_1
+export_simulation -of_objects [get_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci] -directory C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files -ipstatic_source_dir C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/modelsim} {questa=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/questa} {riviera=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/riviera} {activehdl=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+close_hw_manager
+file mkdir C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new/apple1_urbana_tb.sv w ]
+add_files -fileset sim_1 C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new/apple1_urbana_tb.sv
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top apple1_urbana_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source apple1_urbana_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {all} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source apple1_urbana_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+set_property file_type SystemVerilog [get_files <filename>.v]
+set_property file_type SystemVerilog [get_files *.v]
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_simulation
+source apple1_urbana_tb.tcl
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+close_hw_manager
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top memory_initialization_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source memory_initialization_tb.tcl
+close_sim
+launch_simulation
+source memory_initialization_tb.tcl
+close_sim
+launch_simulation
+source memory_initialization_tb.tcl
+set_property top apple1_tb [get_filesets sim_1]
+launch_simulation
+close_sim
+launch_simulation
+source apple1_tb.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new/cpu_tb.sv w ]
+add_files -fileset sim_1 C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new/cpu_tb.sv
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top arlet_6502_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+close_sim
+launch_simulation
+source arlet_6502_tb.tcl
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source arlet_6502_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top apple1_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source apple1_tb.tcl
+set_property -dict [list \
+  CONFIG.CLKOUT4_JITTER {299.404} \
+  CONFIG.CLKOUT4_PHASE_ERROR {164.985} \
+  CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {6.25} \
+  CONFIG.CLKOUT4_USED {true} \
+  CONFIG.MMCM_CLKOUT3_DIVIDE {128} \
+  CONFIG.NUM_OUT_CLKS {4} \
+] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 16
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files -ipstatic_source_dir C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/modelsim} {questa=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/questa} {riviera=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/riviera} {activehdl=C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+source apple1_tb.tcl
+close_sim
+launch_simulation
+source apple1_tb.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+close_hw_manager
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new/timing_tb.sv w ]
+add_files -fileset sim_1 C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.srcs/sim_1/new/timing_tb.sv
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/theox/Desktop/aapl1_urbana/aapl1_urbana.runs/impl_1/apple1_urbana.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+close_sim
+close_project
+create_project apple_1_2 C:/Users/theox/Desktop/apple_1_2 -part xc7s50csga324-1
+add_files -scan_for_includes {C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_rdy.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_timer.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_busy_sleep.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/NIOSIIe.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_timer_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_rsp_demux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/USB.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_sc_fifo.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/ppu.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_007.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_sem.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_warning.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/HID.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/cart_init/prg.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_clock_crosser.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_dma_dev.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_driver.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_syscall.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_timer_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/linker.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_exceptions.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_legacy_irq.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/GenericMacros.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/ram/ram.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_hooks.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_usb_rst.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/project_config.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_rf_ram_a.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_load.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/transfer.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_dev_llist.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/vram/vram.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_alarm.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sdram_pll.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_irq.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/controller.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_master_agent.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_ociram_default_contents.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_llist.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_reset_controller.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/ioctl.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/alt_types.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_002.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_din.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_sysid_qsys_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_iic_isr_register.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_std_synchronizer_nocut.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_debug_slave_tck.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_flash_dev.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_addr.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/VGA_Controller.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_set_args.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_rf_ram_b.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_address_alignment.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_spi.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/usb_ch9.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_stdio.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_arbitrator.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_debug_slave_wrapper.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_debug_slave_sysclk.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_slave_translator.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_uncompressor.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_sysid_qsys.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/MAX3421E.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_cmd_demux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_spi_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_slave_agent.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_default_burst_converter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_dma.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_sim.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_alarm.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65_ALU.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65_Pack.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_pio_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_log_printf.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/sync.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_key.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_008.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_reset_synchronizer.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_cache.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_timestamp.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/chrrom/chrrom.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_sys_wrappers.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_dev.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_errno.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_license_reminder_ucosii.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_onchip_memory2_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_jtag_uart_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_006_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_hex.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_005.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/HexDriver.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_wrap_burst_converter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_jtag_uart_fd.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sw.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_007.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sdram.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nes_pll.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_sys_init.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_debug.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_rsp_mux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_irq_table.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_read.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_pipeline_base.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/altera_nios2_gen2_irq.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_flag.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/termios.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/top.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_flash.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_pipeline_stage.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/GenericTypeDefs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_cpu_clk.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/io.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/nios2.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_irq_entry.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_keycode.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_led.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_stack.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/OAM/OAM.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_addr.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_file.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/cart_init/chr.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_spi_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sysid_qsys_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_width_adapter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_006.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_cmd_mux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_inst.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/system.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_jtag_uart.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_009.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_flash_types.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65_MCode.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_bb.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_exception_handler_registry.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter_new.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/nios2_gmon_data.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_irq_mapper.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_usb_gpx.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_test_bench.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_no_error.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_master_translator.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_jtag_uart_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_inst.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_incr_burst_converter.sv}
+import_files {C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_rdy.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_timer.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_busy_sleep.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/NIOSIIe.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_timer_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_rsp_demux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/USB.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_sc_fifo.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/ppu.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_007.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_sem.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_warning.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/HID.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/cart_init/prg.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_clock_crosser.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_dma_dev.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_driver.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_syscall.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_timer_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/linker.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_exceptions.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_legacy_irq.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/GenericMacros.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/ram/ram.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_hooks.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_usb_rst.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/project_config.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_rf_ram_a.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_load.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/transfer.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_dev_llist.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/vram/vram.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_007_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_alarm.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sdram_pll.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_irq.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/controller.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_master_agent.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_ociram_default_contents.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_llist.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_reset_controller.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/ioctl.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/alt_types.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_002.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_din.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_sysid_qsys_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_iic_isr_register.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_std_synchronizer_nocut.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_debug_slave_tck.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_flash_dev.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_addr.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/VGA_Controller.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_set_args.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_rf_ram_b.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_address_alignment.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_spi.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/usb_ch9.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_stdio.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_arbitrator.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_debug_slave_wrapper.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_debug_slave_sysclk.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_slave_translator.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_uncompressor.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_sysid_qsys.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/MAX3421E.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_cmd_demux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_spi_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_slave_agent.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_default_burst_converter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_dma.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_sim.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_alarm.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65_ALU.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65_Pack.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_pio_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_log_printf.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/sync.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_key.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_008.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_reset_synchronizer.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_cache.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_timestamp.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/chrrom/chrrom.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_sys_wrappers.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_dev.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_errno.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_license_reminder_ucosii.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_onchip_memory2_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_jtag_uart_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_006_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_hex.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_005.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/HexDriver.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_wrap_burst_converter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_jtag_uart_fd.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sw.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_007.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sdram.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nes_pll.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_sys_init.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_debug.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_rsp_mux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_irq_table.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_ram_read.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_pipeline_base.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/altera_nios2_gen2_irq.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/os/alt_flag.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/termios.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/top.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_flash.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_avalon_st_pipeline_stage.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller/usb_kb/GenericTypeDefs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_cpu_clk.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/io.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/nios2.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_irq_entry.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_keycode.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_led.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_stack.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/OAM/OAM.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_addr.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_file.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/cart_init/chr.mif C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_spi_regs.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_sysid_qsys_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_005_error_adapter_0.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_width_adapter.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_avalon_st_adapter_006.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_cmd_mux.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_inst.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/system.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/drivers/inc/altera_avalon_jtag_uart.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_mm_interconnect_0_router_009.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/sys/alt_flash_types.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/src/t65/T65_MCode.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_bb.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_exception_handler_registry.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_burst_adapter_new.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/nios2_gmon_data.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_irq_mapper.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_usb_gpx.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_nios2_gen2_0_cpu_test_bench.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/software/usb_controller_bsp/HAL/inc/priv/alt_no_error.h C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_merlin_master_translator.sv C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/NIOSIIe_jtag_uart_0.v C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_inst.vhd C:/Users/theox/Downloads/NES-FPGA-main/NES-FPGA-main/qsys/NIOSIIe/synthesis/submodules/altera_incr_burst_converter.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  {C:/Users/theox/Desktop/apple_1_2/apple_1_2.srcs/sources_1/imports/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_inst.v C:/Users/theox/Desktop/apple_1_2/apple_1_2.srcs/sources_1/imports/NES-FPGA-main/qsys/NIOSIIe/NIOSIIe_inst.vhd}]
